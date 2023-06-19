@@ -19,6 +19,16 @@ public class Cache<K,V> implements ICache<K,V> {
     private Map<K,V> map;
 
 
+    /**
+     * 设置map信息
+     * @param map
+     * @return
+     */
+    public Cache<K,V> map(Map<K,V> map){
+        this.map = map;
+        return this;
+    }
+
 
     public ICache<K, V> expire(K key, long timeInMills) {
         return null;
@@ -70,5 +80,9 @@ public class Cache<K,V> implements ICache<K,V> {
 
     public Set<Entry<K, V>> entrySet() {
         return null;
+    }
+
+    public void init() {
+
     }
 }
